@@ -1,0 +1,4 @@
+week10/.venv/
+week10/movielens_dbt/target/
+week10/movielens_dbt/logs/
+week10/movielens_dbt/dbt_packages/

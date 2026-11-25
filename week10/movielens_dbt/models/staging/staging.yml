@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_users
+    description: Očistení a pretypovaní používatelia zo zdroja bronze.users.
+    columns:
+      - name: user_id
+        description: Identifikátor používateľa.
+        data_tests:
+          - unique
+          - not_null
+      - name: age
+        description: Identifikátor vekovej skupiny.
+      - name: gender
+        description: Pohlavie používateľa.
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["M", "F"]
