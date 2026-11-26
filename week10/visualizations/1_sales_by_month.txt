@@ -1,0 +1,5 @@
+SELECT sales_month, total_sales
+FROM dbt_reporting.rpt_sales_by_month
+ORDER BY sales_month;
+
+Interpretácia: Tržby spoločnosti vykazujú od jesene 1996 výrazný rastúci trend – z letných hodnôt okolo 33 000 – 38 000 vzrástli až na maximum v januári 1997 (83 400,47). Pokles vo februári 1997 (19 978,91) je spôsobený tým, že dataset zachytáva objednávky len do 12. februára 1997.

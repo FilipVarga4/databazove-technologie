@@ -1,0 +1,5 @@
+SELECT employee_name, total_sales
+FROM dbt_reporting.rpt_sales_by_employee
+ORDER BY total_sales DESC;
+
+Interpretácia: Najúspešnejšou obchodníčkou je s výrazným náskokom Margaret Peacock s celkovými tržbami 105 696,50, čo je takmer dvojnásobok oproti druhej Nancy Davolio (57 690,39). Ostatní zamestnanci sa pohybujú v rozmedzí od 15 734,10 (Anne Dodsworth) po 42 838,35 (Janet Leverling).

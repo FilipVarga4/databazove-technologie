@@ -1,0 +1,5 @@
+SELECT category_name, total_sales
+FROM dbt_reporting.rpt_sales_by_category
+ORDER BY total_sales DESC;
+
+Interpretácia: Najväčší podiel na celkových tržbách generuje kategória Beverages (99 464,50), nasledovaná mliečnymi výrobkami Dairy Products (69 921,00) a cukrovinkami Confections (54 909,16). Naopak najmenej tržieb prinášajú kategórie Grains/Cereals (22 327,75) a Produce (23 401,40).
