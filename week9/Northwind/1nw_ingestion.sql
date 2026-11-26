@@ -97,13 +97,13 @@ TRUNCATE TABLE
     bronze.customers,
     bronze.categories;
 
-\copy bronze.categories (categoryid, categoryname, description) FROM 'Northwind/categories.csv' WITH (FORMAT CSV, HEADER TRUE);
-\copy bronze.customers (customerid, customername, contactname, address, city, postalcode, country) FROM 'Northwind/customers.csv' WITH (FORMAT CSV, HEADER TRUE);
-\copy bronze.employees (employeeid, lastname, firstname, birthdate, photo, notes) FROM 'Northwind/employees.csv' WITH (FORMAT CSV, HEADER TRUE);
-\copy bronze.shippers (shipperid, shippername, phone) FROM 'Northwind/shippers.csv' WITH (FORMAT CSV, HEADER TRUE);
-\copy bronze.suppliers (supplierid, suppliername, contactname, address, city, postalcode, country, phone) FROM 'Northwind/suppliers.csv' WITH (FORMAT CSV, HEADER TRUE);
-\copy bronze.products (productid, productname, supplierid, categoryid, unit, price) FROM 'Northwind/products.csv' WITH (FORMAT CSV, HEADER TRUE);
-\copy bronze.orders (orderid, customerid, employeeid, orderdate, shipperid) FROM 'Northwind/orders.csv' WITH (FORMAT CSV, HEADER TRUE);
-\copy bronze.orderdetails (orderdetailid, orderid, productid, quantity) FROM 'Northwind/orderdetails.csv' WITH (FORMAT CSV, HEADER TRUE);
+\copy bronze.categories (categoryid, categoryname, description) FROM 'categories.csv' WITH (FORMAT CSV, HEADER TRUE, DELIMITER ';');
+\copy bronze.customers (customerid, customername, contactname, address, city, postalcode, country) FROM 'customers.csv' WITH (FORMAT CSV, HEADER TRUE, DELIMITER ';');
+\copy bronze.employees (employeeid, lastname, firstname, birthdate, photo, notes) FROM 'employees.csv' WITH (FORMAT CSV, HEADER TRUE, DELIMITER ';');
+\copy bronze.shippers (shipperid, shippername, phone) FROM 'shippers.csv' WITH (FORMAT CSV, HEADER TRUE, DELIMITER ';');
+\copy bronze.suppliers (supplierid, suppliername, contactname, address, city, postalcode, country, phone) FROM 'suppliers.csv' WITH (FORMAT CSV, HEADER TRUE, DELIMITER ';');
+\copy bronze.products (productid, productname, supplierid, categoryid, unit, price) FROM 'products.csv' WITH (FORMAT CSV, HEADER TRUE, DELIMITER ';');
+\copy bronze.orders (orderid, customerid, employeeid, orderdate, shipperid) FROM 'orders.csv' WITH (FORMAT CSV, HEADER TRUE, DELIMITER ';');
+\copy bronze.orderdetails (orderdetailid, orderid, productid, quantity) FROM 'orderdetails.csv' WITH (FORMAT CSV, HEADER TRUE, DELIMITER ';');
 
 COMMIT;
